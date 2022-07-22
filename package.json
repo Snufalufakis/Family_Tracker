@@ -1,0 +1,29 @@
+{
+  "name": "family-tracker",
+  "version": "1.0.0",
+  "description": "## Table of contents",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snufalufakis/Family_Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Snufalufakis/Family_Tracker/issues"
+  },
+  "homepage": "https://github.com/Snufalufakis/Family_Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^9.0.2",
+    "mysql2": "^2.3.3"
+  }
+}
