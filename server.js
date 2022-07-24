@@ -1,4 +1,50 @@
-const require = require('inquirer');
+const inq = require('inquirer');
 const mysql = require('mysql2');
 const cTable = require('console.table');
 const path = require('path');
+const connection = require('./db/connection')
+const add = require('./lib/add');
+const update = require('./lib/update');
+const view = require('./lib/view');
+const app = express();
+const PORT = process.env.PORT || 3001
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+app.listen(PORT, () => console.log('listening on port on ${PORT}'));
+
+connection.connect = () => {
+if (err) throw err;
+console.log('Seems like you ready');
+exports.start();
+}
+exports.start =() => {
+    inq.prompt([
+        {
+            type: 'list',
+            message: 'What would you like to see?',
+            name: 'choices',
+            choices: [
+                'View All Family Members',
+                'Add Family Members',
+                'Update Family Members',
+                'Exit'
+            ]
+        }
+    ])
+    .then(function(answers){
+        if (answers.choice === 'View All Family Members') {
+            view.viewAllFamilyMembers();
+        }
+        else if(answers.choice === 'Add Family Members') {
+            add.addFamilyMembers();
+        }
+        else if(answers.choice === 'Update Family Members') {
+            update.updateFamilyMembers();
+        }
+        else if(answers.choice === 'Exit') {
+            connection.close();
+            return
+        }
+    })
+};
+
