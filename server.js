@@ -1,4 +1,4 @@
-const inq = require('inquirer');
+const inq = import('inquirer');
 const mysql = require('mysql2');
 const cTable = require('console.table');
 const path = require('path');
@@ -6,11 +6,9 @@ const connection = require('./db/connection')
 const add = require('./lib/add');
 const update = require('./lib/update');
 const view = require('./lib/view');
-const app = express();
+
 const PORT = process.env.PORT || 3001
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
-app.listen(PORT, () => console.log('listening on port on ${PORT}'));
+
 
 connection.connect = () => {
 if (err) throw err;
@@ -47,4 +45,3 @@ exports.start =() => {
         }
     })
 };
-
