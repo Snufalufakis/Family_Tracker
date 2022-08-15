@@ -1,7 +1,7 @@
 -- Insert department names for perdetermined family members.
 INSERT INTO department (dept_name) VALUES ('Homemaker'), ('House Wife'), ('House Husband'), ('The Black Sheep'), ('Bread Winner'), ('Role Model'), ('Leader'), ('Provider'), ('Wall Doodler'), ('Daiper Changer'), ('Nanny'), ('The Apple Of My Eyes'), ('Stay at Home Mom'), ('Stay at home Dad'), ('Work From Home'), ('Father Figure'), ('Wears the trousers'), ('Rules the roost');
 
-INSERT INTO family_role (title, allowance, dept_id) VALUES
+INSERT INTO family_role (title, allowance, department) VALUES
 ('Third Cousin', 6091.00, 16), 
 ('Second Cousin Once Removed', 3630.00, 3
 ),
@@ -25,7 +25,7 @@ INSERT INTO family_role (title, allowance, dept_id) VALUES
 ('Parent', 3518.00, 4),
 ('Brother', 3260.00, 3),
 ('Sister', 8694.00, 13),
-('Tirst Cousin Trice Removed', 4457.00, 14),;
+('Tirst Cousin Trice Removed', 4457.00, 14);
 
 
 
@@ -34,4 +34,4 @@ INSERT INTO family_members (first_name, last_name, fm_role_id, manager_id) VALUE
 ('Marvin ', 'Morgan', 6, 1),
 ('Nellie ', 'Henderson', 2, null),
 ('Bob', 'Jovie', 3, null),
-('Karen', ' Morgan' 7, null);
+('Karen', ' Morgan', 7, null);

@@ -11,12 +11,12 @@ CREATE TABLE department(
 
 -- CREATE TABLE for role
 CREATE TABLE family_role(
-    id INT AUTO_INCREMENT NOT NULL,
+    role_id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(30) NOT NULL,
     allowance INT NOT NULL,
-    department_id INT NOT NULL,
+    department INT NOT NULL,
     PRIMARY KEY (role_id),
-    FOREIGN KEY (dept_id) REFERENCES department (dept_id)
+    FOREIGN KEY (department) REFERENCES department (dept_id)
 );
 
 -- CREATE TABLE for family
@@ -31,6 +31,8 @@ CREATE TABLE family_members(
     FOREIGN KEY (fm_role_id) REFERENCES family_role (role_id),
     FOREIGN KEY (manager_id) REFERENCES family_members(fm_id)
 );
+
+-- 
 
 -- select from family_db for department
 SELECT * FROM family_db.department
