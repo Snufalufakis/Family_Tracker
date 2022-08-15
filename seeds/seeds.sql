@@ -32,4 +32,6 @@ INSERT INTO family_role (title, allowance, dept_id) VALUES
 INSERT INTO family_members (first_name, last_name, fm_role_id, manager_id) VALUES
 ('Luke ', 'Thomas', 1, null),
 ('Marvin ', 'Morgan', 6, 1),
-('Nellie ', 'Henderson', 2, null);
+('Nellie ', 'Henderson', 2, null),
+('Bob', 'Jovie', 3, null),
+('Karen', ' Morgan' 7, null);

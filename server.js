@@ -1,17 +1,28 @@
-import inquirer from "inquirer";
-import mysql from "mysql2";
-import cTable from "console.table";
-import path from "path";
-import connection from "./db/connection.js";
-import add from "./lib/add.js";
-import update from "./lib/update.js";
-import view from "./lib/view.js";
+require("dotenv").config();
+const cTable = require("console.table");
+const express = require("express");
+const mysql = require("mysql2");
+const view = require("./lib/view");
+const add = require("./lib/add");
+const update = require("./lib/update");
+const connection = require("./config/connection");
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
+// import inquirer from "inquirer";
+// import mysql from "mysql2";
+// import cTable from "console.table";
+// import path from "path";
+// import connection from "./config/connection.js";
+// import add from "./lib/add.js";
+// import update from "./lib/update.js";
+// import view from "./lib/view.js";
 
 const PORT = process.env.PORT || 3001;
 
-console.log(inquirer);
-inquirer.prompt([
+inquirer
+  .prompt([
     {
       type: "list",
       message: "What would you like to see?",
@@ -37,7 +48,6 @@ inquirer.prompt([
     }
   });
 
-  
 // function start () {
 
 //     inquirer.prompt([
