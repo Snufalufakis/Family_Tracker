@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 require("dotenv").config();
 const cTable = require("console.table");
 const express = require("express");
-const mysql = require("mysql2");
+mysql = require("mysql2");
 const connection = require("./config/connection.js");
 const {
   addFamilyMembers,
