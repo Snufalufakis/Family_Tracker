@@ -14,7 +14,7 @@ CREATE TABLE family_role(
     role_id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(30) NOT NULL,
     allowance INT NOT NULL,
-    department INT NOT NULL,
+    department INT,
     PRIMARY KEY (role_id),
     FOREIGN KEY (department) REFERENCES department (dept_id)
 );
@@ -25,10 +25,10 @@ CREATE TABLE family_members(
    fm_id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    fm_role_id INT NOT NULL,
+    fm_role_id INT,
     manager_id INT,
     PRIMARY KEY (fm_id),
-    FOREIGN KEY (fm_role_id) REFERENCES family_role (role_id),
+    FOREIGN KEY (fm_role_id) REFERENCES department (dept_id,dept_name),
     FOREIGN KEY (manager_id) REFERENCES family_members(fm_id)
 );
 

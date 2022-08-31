@@ -1,5 +1,5 @@
 -- Insert department names for perdetermined family members.
-INSERT INTO department (dept_name) VALUES ('Homemaker'), ('House Wife'), ('House Husband'), ('The Black Sheep'), ('Bread Winner'), ('Role Model'), ('Leader'), ('Provider'), ('Wall Doodler'), ('Daiper Changer'), ('Nanny'), ('The Apple Of My Eyes'), ('Stay at Home Mom'), ('Stay at home Dad'), ('Work From Home'), ('Father Figure'), ('Wears the trousers'), ('Rules the roost');
+INSERT INTO department (dept_id,dept_name) VALUES (1,'Homemaker'), (2,'House Wife'), (3,'House Husband'), (4,'The Black Sheep'), (5,'Bread Winner'), (6,'Role Model'), (7,'Leader'), (8,'Provider'), (9,'Wall Doodler'), (10,'Daiper Changer'), (11,'Nanny'), (12,'The Apple Of My Eyes'), (13,'Stay at Home Mom'), (14,'Stay at home Dad'), (15,'Work From Home'), (16,'Father Figure'), (17,'Wears the trousers'), (18,'Rules the roost');
 
 INSERT INTO family_role (title, allowance, department) VALUES
 ('Third Cousin', 6091.00, 16), 
